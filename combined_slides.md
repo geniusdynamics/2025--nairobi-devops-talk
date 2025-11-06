@@ -263,7 +263,6 @@ mdc: true
       <h3 class="text-2xl font-bold mb-3">Transparency</h3>
       <p class="text-base opacity-80">Inspect every line of code. Know exactly what's running on your infrastructure.</p>
     </div>
-    
     <div class="text-center p-8 bg-purple-500/10 rounded-xl">
       <div class="text-6xl mb-6">🛡️</div>
       <h3 class="text-2xl font-bold mb-3">Security</h3>
@@ -274,25 +273,25 @@ mdc: true
 
 ---
 
-<div class="px-20 py-16">
+<div class="px-20 overflow-y-auto">
   <h1 class="text-4xl font-bold mb-12">Introducing Our Stack</h1>
   
-  <div class="space-y-8 max-w-4xl">
-    <div class="p-6 bg-blue-500/10 rounded-lg">
+  <div class="space-y-2 max-w-4xl">
+    <div class="p-2 bg-blue-500/10 rounded-lg">
       <h2 class="text-2xl font-bold mb-3 text-blue-400">NethServer</h2>
       <p class="text-base opacity-90">Complete Infrastructure Foundation</p>
       <p class="text-sm opacity-70 mt-2">
         The Swiss Army knife of self-hosted infrastructure. Handles email, networking, security, file services, and more. Built on Rocky Linux for enterprise-grade stability.
       </p>
     </div>
-    <div class="p-6 bg-green-500/10 rounded-lg">
+    <div class="p-2 bg-green-500/10 rounded-lg">
       <h2 class="text-2xl font-bold mb-3 text-green-400">Coolify</h2>
       <p class="text-base opacity-90">The Open Source Heroku Alternative</p>
       <p class="text-sm opacity-70 mt-2">
         Deploy applications with the simplicity of platform-as-a-service while maintaining complete control. Git push deployments, automatic SSL, and zero-downtime updates.
       </p>
     </div>
-    <div class="p-6 bg-purple-500/10 rounded-lg">
+    <div class="p-2 bg-purple-500/10 rounded-lg">
       <h2 class="text-2xl font-bold mb-3 text-purple-400">Dokploy</h2>
       <p class="text-base opacity-90">Container Orchestration Made Simple</p>
       <p class="text-sm opacity-70 mt-2">
@@ -303,8 +302,6 @@ mdc: true
 </div>
 
 ---
-
-## class: text-center
 
 <div class="h-full flex items-center justify-center">
   <div>
@@ -513,8 +510,6 @@ graph TB
 
 ---
 
-## class: text-center
-
 <div class="h-full flex items-center justify-center">
   <div>
     <h1 class="text-5xl font-bold mb-6">Part 2: Coolify</h1>
@@ -626,7 +621,7 @@ graph TB
     <div class="p-6 bg-green-500/5 border-l-4 border-green-400">
       <h3 class="text-xl font-bold mb-3">Step 2: One-Line Install</h3>
       <p class="text-base opacity-80 mb-3">Run this single command to install Coolify:</p>
-      <pre class="bg-gray-800 p-4 rounded text-sm">curl -fsSL https://get.coolify.io | bash</pre>
+      <pre class="bg-gray-800 p-4 rounded text-sm">curl -fsSL https://cdn.coollabs.io/coolify/install.sh | sudo bash</pre>
       <p class="text-sm opacity-70 mt-2">The installer handles all dependencies and configuration automatically.</p>
     </div>
     <div class="p-6 bg-purple-500/5 border-l-4 border-purple-400">
@@ -646,15 +641,15 @@ graph TB
 
 ---
 
-<div class="px-20 py-16">
+<div class="px-20">
   <h1 class="text-4xl font-bold mb-8">Coolify Deployment Workflow</h1>
   
   <p class="text-base opacity-80 mb-8">
     Here's an example configuration for deploying a Next.js application with Coolify:
   </p>
   
-  <pre class="bg-gray-800 p-6 rounded text-sm overflow-auto" style="max-height: 500px;">
-<code class="language-yaml"># coolify.yaml
+</div>
+```yaml
 version: '1.0'
 
 services:
@@ -674,16 +669,14 @@ databases:
 postgres:
 image: postgres:15
 volumes: - postgres_data:/var/lib/postgresql/data
-environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
+environment: - POSTGRES_PASSWORD=${DB_PASSWORD}
 
-  </pre>
-</div>
-
+```
 ---
 
 <div class="px-20 py-16">
   <h1 class="text-4xl font-bold mb-12">Coolify DevOps Benefits</h1>
-  
+
   <div class="space-y-6 max-w-5xl">
     <div class="p-6 bg-blue-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2">Developer Velocity</h3>
@@ -725,11 +718,11 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
 
 <div class="px-20 py-16">
   <h1 class="text-4xl font-bold mb-8">What is Dokploy?</h1>
-  
+
   <p class="text-lg opacity-90 mb-12 max-w-4xl leading-relaxed">
     Dokploy is a modern, self-hosted platform-as-a-service that provides Kubernetes-like orchestration capabilities with dramatically simplified management. It gives you the power of container orchestration without requiring deep expertise in distributed systems.
   </p>
-  
+
   <div class="space-y-8">
     <div>
       <h2 class="text-2xl font-bold mb-4 text-red-400">The Kubernetes Problem</h2>
@@ -756,7 +749,7 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
 
 <div class="px-20 py-16">
   <h1 class="text-4xl font-bold mb-12">Dokploy Core Features</h1>
-  
+
   <div class="space-y-6 max-w-5xl">
     <div class="p-6 bg-blue-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
@@ -810,7 +803,7 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
 
 <div class="px-20 py-16">
   <h1 class="text-4xl font-bold mb-12">Dokploy vs Alternatives</h1>
-  
+
   <div class="grid grid-cols-3 gap-8">
     <div class="p-6 border-2 border-blue-500/50 rounded-lg">
       <h3 class="text-2xl font-bold mb-4 text-blue-400">Docker Compose</h3>
@@ -879,28 +872,28 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
 
 <div class="px-20 py-12">
   <h1 class="text-4xl font-bold mb-8">Dokploy Architecture</h1>
-  
-  <div class="flex items-center justify-center">
-    
+
+  <div class="flex items-center justify-center scale-[2] pt-10">
+
 ```mermaid
 graph TB
     A[Dokploy Control Panel] --> B[Application Manager]
     A --> C[Database Manager]
     A --> D[Service Manager]
-    
+
     B --> E[Container Runtime]
     C --> E
     D --> E
-    
+
     E --> F[Traefik Proxy]
     F --> G[Application 1]
     F --> H[Application 2]
     F --> I[Application 3]
-    
+
     E --> J[PostgreSQL]
     E --> K[Redis]
     E --> L[MongoDB]
-    
+
     style A fill:#4299e1
     style E fill:#48bb78
     style F fill:#ed8936
@@ -944,11 +937,11 @@ graph TB
 
 ---
 
-<div class="px-20 py-16">
+<div class="px-20 scale-[0.5]">
   <h1 class="text-4xl font-bold mb-8">Dokploy Configuration Example</h1>
-  
-  <pre class="bg-gray-800 p-6 rounded text-sm overflow-auto" style="max-height: 520px;">
-<code class="language-yaml">version: '3.8'
+</div>
+```yaml
+version: '3.8'
 
 services:
 frontend:
@@ -986,11 +979,8 @@ volumes: - redis_data:/data
 
 volumes:
 postgres_data:
-redis_data:</code>
-
-  </pre>
-</div>
-
+redis_data:
+```
 ---
 
 <div class="px-20 py-16">
@@ -1895,15 +1885,15 @@ graph TB
       <div class="space-y-2 text-sm pt-4">
         <div class="flex items-center gap-2">
           <carbon-logo-twitter class="text-base" />
-          <span>@kemboielvis</span>
+          <span>@kemboielvis22</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-logo-github class="text-base" />
-          <span>github.com/kemboielvis</span>
+          <span>github.com/kemboi22</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-email class="text-base" />
-          <span>elvis@genius.ke</span>
+          <span>kemboielvis@genius.ke</span>
         </div>
       </div>
     </div>
@@ -1923,7 +1913,8 @@ graph TB
           <div><span class="font-bold">NethServer:</span> nethserver.org</div>
           <div><span class="font-bold">Docs:</span> docs.nethserver.org</div>
           <div><span class="font-bold">Community:</span> community.nethserver.org</div>
-          <div><span class="font-bold">Our Platform:</span> forge.genius.ke</div>
+          <div><span class="font-bold">Platform Apps:</span> forge.genius.ke</div>
+          <div><span class="font-bold">Website:</span> genius.africa</div>
         </div>
       </div>
       <div class="p-8 bg-green-500/10 rounded-xl text-left">
