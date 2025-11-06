@@ -263,7 +263,6 @@ mdc: true
       <h3 class="text-2xl font-bold mb-3">Transparency</h3>
       <p class="text-base opacity-80">Inspect every line of code. Know exactly what's running on your infrastructure.</p>
     </div>
-    
     <div class="text-center p-8 bg-purple-500/10 rounded-xl">
       <div class="text-6xl mb-6">🛡️</div>
       <h3 class="text-2xl font-bold mb-3">Security</h3>
@@ -274,25 +273,25 @@ mdc: true
 
 ---
 
-<div class="px-20 py-16">
+<div class="px-20 overflow-y-auto">
   <h1 class="text-4xl font-bold mb-12">Introducing Our Stack</h1>
   
-  <div class="space-y-8 max-w-4xl">
-    <div class="p-6 bg-blue-500/10 rounded-lg">
+  <div class="space-y-2 max-w-4xl">
+    <div class="p-2 bg-blue-500/10 rounded-lg">
       <h2 class="text-2xl font-bold mb-3 text-blue-400">NethServer</h2>
       <p class="text-base opacity-90">Complete Infrastructure Foundation</p>
       <p class="text-sm opacity-70 mt-2">
         The Swiss Army knife of self-hosted infrastructure. Handles email, networking, security, file services, and more. Built on Rocky Linux for enterprise-grade stability.
       </p>
     </div>
-    <div class="p-6 bg-green-500/10 rounded-lg">
+    <div class="p-2 bg-green-500/10 rounded-lg">
       <h2 class="text-2xl font-bold mb-3 text-green-400">Coolify</h2>
       <p class="text-base opacity-90">The Open Source Heroku Alternative</p>
       <p class="text-sm opacity-70 mt-2">
         Deploy applications with the simplicity of platform-as-a-service while maintaining complete control. Git push deployments, automatic SSL, and zero-downtime updates.
       </p>
     </div>
-    <div class="p-6 bg-purple-500/10 rounded-lg">
+    <div class="p-2 bg-purple-500/10 rounded-lg">
       <h2 class="text-2xl font-bold mb-3 text-purple-400">Dokploy</h2>
       <p class="text-base opacity-90">Container Orchestration Made Simple</p>
       <p class="text-sm opacity-70 mt-2">
@@ -303,8 +302,6 @@ mdc: true
 </div>
 
 ---
-
-## class: text-center
 
 <div class="h-full flex items-center justify-center">
   <div>
@@ -440,7 +437,7 @@ mdc: true
 <div class="px-20 py-12">
   <h1 class="text-4xl font-bold mb-8">NethServer Architecture</h1>
   
-  <div class="flex items-center justify-center">
+  <div class="flex items-center justify-center scale-[2.5] pt-20">
     
 ```mermaid
 graph TB
@@ -491,7 +488,6 @@ graph TB
         <li>• Must maintain high availability</li>
       </ul>
     </div>
-    
     <div>
       <h3 class="text-xl font-bold mb-4 text-green-400">Solution with NethServer</h3>
       <ul class="space-y-2 text-base opacity-80">
@@ -513,8 +509,6 @@ graph TB
 </div>
 
 ---
-
-## class: text-center
 
 <div class="h-full flex items-center justify-center">
   <div>
@@ -543,7 +537,6 @@ graph TB
         <li>• Preview environments for pull requests</li>
       </ul>
     </div>
-    
     <div>
       <h2 class="text-2xl font-bold mb-4 text-green-400">The Self-Hosted Advantage</h2>
       <ul class="space-y-3 text-base opacity-80">
@@ -573,7 +566,6 @@ graph TB
           Supports Node.js, Python, PHP, Ruby, Go, and more. Deploy static sites built with React, Vue, Next.js, or any modern framework. Even run custom Docker containers or full compose files for complex applications.
         </p>
       </div>
-      
       <div class="p-6 bg-green-500/10 rounded-lg">
         <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
           <span class="text-2xl">🔄</span>
@@ -584,7 +576,6 @@ graph TB
         </p>
       </div>
     </div>
-    
     <div class="space-y-6">
       <div class="p-6 bg-purple-500/10 rounded-lg">
         <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
@@ -595,7 +586,6 @@ graph TB
           One-click deployment of PostgreSQL, MySQL, MongoDB, Redis, and MariaDB. Automated backups ensure your data is never lost. Point-in-time recovery makes disaster recovery straightforward.
         </p>
       </div>
-      
       <div class="p-6 bg-orange-500/10 rounded-lg">
         <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
           <span class="text-2xl">🌍</span>
@@ -612,32 +602,8 @@ graph TB
 ---
 
 <div class="px-20 py-12">
-  <h1 class="text-4xl font-bold mb-8">Coolify Architecture</h1>
-  
-  <div class="flex items-center justify-center">
-    
-```mermaid
-graph LR
-    A[Git Push] --> B[Coolify Server]
-    B --> C[Build Process]
-    C --> D[Docker Container]
-    D --> E[Nginx Proxy]
-    E --> F[Your Application]
-    
-    B --> G[SSL Management]
-    G --> E
-    
-    B --> H[Database Services]
-    H --> F
-    
-    B --> I[Monitoring]
-    I --> F
-    
-    style B fill:#4299e1
-    style F fill:#48bb78
-```
-
-  </div>
+<h1 class="text-4xl font-bold mb-8">Coolify Architecture</h1>
+<p>Architecture diagram here</p>
 </div>
 
 ---
@@ -652,21 +618,18 @@ graph LR
         You need a server with Docker installed. Any Linux distribution works, though Ubuntu and Debian are most common. Minimum requirements are two gigabytes of RAM and two CPU cores, but four gigabytes of RAM is recommended for production workloads.
       </p>
     </div>
-    
     <div class="p-6 bg-green-500/5 border-l-4 border-green-400">
       <h3 class="text-xl font-bold mb-3">Step 2: One-Line Install</h3>
       <p class="text-base opacity-80 mb-3">Run this single command to install Coolify:</p>
-      <pre class="bg-gray-800 p-4 rounded text-sm">curl -fsSL https://get.coolify.io | bash</pre>
+      <pre class="bg-gray-800 p-4 rounded text-sm">curl -fsSL https://cdn.coollabs.io/coolify/install.sh | sudo bash</pre>
       <p class="text-sm opacity-70 mt-2">The installer handles all dependencies and configuration automatically.</p>
     </div>
-    
     <div class="p-6 bg-purple-500/5 border-l-4 border-purple-400">
       <h3 class="text-xl font-bold mb-2">Step 3: Access Dashboard</h3>
       <p class="text-base opacity-80">
         Navigate to your server's IP address on port eight thousand. Complete the setup wizard by creating an admin account and configuring basic settings. The entire process takes less than five minutes.
       </p>
     </div>
-    
     <div class="p-6 bg-orange-500/5 border-l-4 border-orange-400">
       <h3 class="text-xl font-bold mb-2">Step 4: Connect Git Repository</h3>
       <p class="text-base opacity-80">
@@ -678,15 +641,15 @@ graph LR
 
 ---
 
-<div class="px-20 py-16">
+<div class="px-20">
   <h1 class="text-4xl font-bold mb-8">Coolify Deployment Workflow</h1>
   
   <p class="text-base opacity-80 mb-8">
     Here's an example configuration for deploying a Next.js application with Coolify:
   </p>
   
-  <pre class="bg-gray-800 p-6 rounded text-sm overflow-auto" style="max-height: 500px;">
-<code class="language-yaml"># coolify.yaml
+</div>
+```yaml
 version: '1.0'
 
 services:
@@ -706,16 +669,15 @@ databases:
 postgres:
 image: postgres:15
 volumes: - postgres_data:/var/lib/postgresql/data
-environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
+environment: - POSTGRES_PASSWORD=${DB_PASSWORD}
 
-  </pre>
-</div>
+```
 
 ---
 
 <div class="px-20 py-16">
   <h1 class="text-4xl font-bold mb-12">Coolify DevOps Benefits</h1>
-  
+
   <div class="space-y-6 max-w-5xl">
     <div class="p-6 bg-blue-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2">Developer Velocity</h3>
@@ -723,21 +685,18 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
         Developers push code and Coolify handles building, testing, and deploying automatically. No context switching to infrastructure management means developers stay in flow state longer. Faster iterations lead to faster product development.
       </p>
     </div>
-    
     <div class="p-6 bg-green-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2">Infrastructure as Code</h3>
       <p class="text-base opacity-80">
         Your deployment configuration lives in your repository alongside your code. It's version controlled, reviewable in pull requests, and auditable. This makes deployments repeatable and predictable across all environments.
       </p>
     </div>
-    
     <div class="p-6 bg-purple-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2">Cost Efficiency</h3>
       <p class="text-base opacity-80">
         Run unlimited applications on your infrastructure with no per-app pricing or usage metering. You only pay for the server resources you use. For most teams, this results in dramatic cost savings compared to platform-as-a-service providers.
       </p>
     </div>
-    
     <div class="p-6 bg-orange-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2">Team Collaboration</h3>
       <p class="text-base opacity-80">
@@ -748,8 +707,6 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
 </div>
 
 ---
-
-## class: text-center
 
 <div class="h-full flex items-center justify-center">
   <div>
@@ -762,11 +719,11 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
 
 <div class="px-20 py-16">
   <h1 class="text-4xl font-bold mb-8">What is Dokploy?</h1>
-  
+
   <p class="text-lg opacity-90 mb-12 max-w-4xl leading-relaxed">
     Dokploy is a modern, self-hosted platform-as-a-service that provides Kubernetes-like orchestration capabilities with dramatically simplified management. It gives you the power of container orchestration without requiring deep expertise in distributed systems.
   </p>
-  
+
   <div class="space-y-8">
     <div>
       <h2 class="text-2xl font-bold mb-4 text-red-400">The Kubernetes Problem</h2>
@@ -774,14 +731,12 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
         Kubernetes is incredibly powerful but notoriously complex. Most teams don't need ninety percent of its features but suffer one hundred percent of its operational overhead. The learning curve is steep, requiring dedicated platform engineers just to keep things running smoothly.
       </p>
     </div>
-    
     <div>
       <h2 class="text-2xl font-bold mb-4 text-green-400">The Dokploy Solution</h2>
       <p class="text-base opacity-80 leading-relaxed">
         Dokploy provides all the container orchestration capabilities you actually need. Multi-container applications, intelligent scaling, service networking, and secrets management are all included. The difference is that Dokploy makes these features accessible through a clean interface and familiar Docker Compose syntax.
       </p>
     </div>
-    
     <div>
       <h2 class="text-2xl font-bold mb-4 text-blue-400">Perfect For</h2>
       <p class="text-base opacity-80 leading-relaxed">
@@ -795,7 +750,7 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
 
 <div class="px-20 py-16">
   <h1 class="text-4xl font-bold mb-12">Dokploy Core Features</h1>
-  
+
   <div class="space-y-6 max-w-5xl">
     <div class="p-6 bg-blue-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
@@ -806,7 +761,6 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
         Deploy complex, multi-container applications using the familiar Docker Compose syntax you already know. No need to learn new paradigms or rewrite your existing configurations. If it works with Docker Compose, it works with Dokploy.
       </p>
     </div>
-    
     <div class="p-6 bg-green-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
         <span class="text-2xl">🔄</span>
@@ -816,7 +770,6 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
         Connect your Git repository and Dokploy automatically deploys on every push. Your infrastructure configuration lives in version control alongside your application code. This creates a complete audit trail and makes rollbacks trivial.
       </p>
     </div>
-    
     <div class="p-6 bg-purple-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
         <span class="text-2xl">🎯</span>
@@ -826,7 +779,6 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
         Containers automatically discover each other through built-in DNS. No manual configuration of service endpoints or IP addresses. The networking just works, allowing you to focus on building features instead of managing infrastructure.
       </p>
     </div>
-    
     <div class="p-6 bg-orange-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
         <span class="text-2xl">📊</span>
@@ -836,7 +788,6 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
         Set resource limits to prevent any single service from monopolizing your infrastructure. Monitor resource usage in real-time through intuitive dashboards. Scale services up or down based on actual demand with simple configuration changes.
       </p>
     </div>
-    
     <div class="p-6 bg-red-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
         <span class="text-2xl">🔐</span>
@@ -853,11 +804,10 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
 
 <div class="px-20 py-16">
   <h1 class="text-4xl font-bold mb-12">Dokploy vs Alternatives</h1>
-  
+
   <div class="grid grid-cols-3 gap-8">
     <div class="p-6 border-2 border-blue-500/50 rounded-lg">
       <h3 class="text-2xl font-bold mb-4 text-blue-400">Docker Compose</h3>
-      
       <div class="mb-6">
         <p class="font-bold text-sm mb-2 text-green-400">Advantages</p>
         <ul class="text-sm opacity-80 space-y-1">
@@ -866,7 +816,6 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
           <li>• Works everywhere</li>
         </ul>
       </div>
-      
       <div>
         <p class="font-bold text-sm mb-2 text-red-400">Limitations</p>
         <ul class="text-sm opacity-80 space-y-1">
@@ -877,10 +826,8 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
         </ul>
       </div>
     </div>
-    
     <div class="p-6 border-2 border-green-500/50 rounded-lg bg-green-500/5">
       <h3 class="text-2xl font-bold mb-4 text-green-400">Dokploy</h3>
-      
       <div class="mb-6">
         <p class="font-bold text-sm mb-2 text-green-400">Advantages</p>
         <ul class="text-sm opacity-80 space-y-1">
@@ -891,7 +838,6 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
           <li>• Simple setup process</li>
         </ul>
       </div>
-      
       <div>
         <p class="font-bold text-sm mb-2 text-red-400">Trade-offs</p>
         <ul class="text-sm opacity-80 space-y-1">
@@ -900,10 +846,8 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
         </ul>
       </div>
     </div>
-    
     <div class="p-6 border-2 border-purple-500/50 rounded-lg">
       <h3 class="text-2xl font-bold mb-4 text-purple-400">Kubernetes</h3>
-      
       <div class="mb-6">
         <p class="font-bold text-sm mb-2 text-green-400">Advantages</p>
         <ul class="text-sm opacity-80 space-y-1">
@@ -912,7 +856,6 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
           <li>• Ultimate flexibility</li>
         </ul>
       </div>
-      
       <div>
         <p class="font-bold text-sm mb-2 text-red-400">Challenges</p>
         <ul class="text-sm opacity-80 space-y-1">
@@ -930,28 +873,28 @@ environment: - POSTGRES_PASSWORD=${DB_PASSWORD}</code>
 
 <div class="px-20 py-12">
   <h1 class="text-4xl font-bold mb-8">Dokploy Architecture</h1>
-  
-  <div class="flex items-center justify-center">
-    
+
+  <div class="flex items-center justify-center scale-[2] pt-10">
+
 ```mermaid
 graph TB
     A[Dokploy Control Panel] --> B[Application Manager]
     A --> C[Database Manager]
     A --> D[Service Manager]
-    
+
     B --> E[Container Runtime]
     C --> E
     D --> E
-    
+
     E --> F[Traefik Proxy]
     F --> G[Application 1]
     F --> H[Application 2]
     F --> I[Application 3]
-    
+
     E --> J[PostgreSQL]
     E --> K[Redis]
     E --> L[MongoDB]
-    
+
     style A fill:#4299e1
     style E fill:#48bb78
     style F fill:#ed8936
@@ -984,7 +927,6 @@ graph TB
         Configure Kubernetes manifests, ingress controllers, persistent volumes, services, config maps, and secrets. Write hundreds of lines of YAML spread across dozens of files. Debug cryptic error messages when something inevitably goes wrong.
       </p>
     </div>
-    
     <div>
       <h3 class="text-xl font-bold mb-3 text-green-400">Dokploy Approach</h3>
       <p class="text-sm opacity-80">
@@ -996,15 +938,15 @@ graph TB
 
 ---
 
-<div class="px-20 py-16">
+<div class="px-20 scale-[0.5]">
   <h1 class="text-4xl font-bold mb-8">Dokploy Configuration Example</h1>
-  
-  <pre class="bg-gray-800 p-6 rounded text-sm overflow-auto" style="max-height: 520px;">
-<code class="language-yaml">version: '3.8'
+</div>
+```yaml
+version: '3.8'
 
 services:
 frontend:
-image: myapp/frontend:latest
+image: myapp/web:latest
 labels: - "traefik.enable=true" - "traefik.http.routers.frontend.rule=Host(`app.example.com`)"
 environment: - API_URL=${API_URL}
 deploy:
@@ -1014,7 +956,7 @@ limits:
 memory: 512M
 
 backend:
-image: myapp/backend:latest
+image: myapp/api:latest
 labels: - "traefik.enable=true" - "traefik.http.routers.api.rule=Host(`api.example.com`)"
 environment: - DATABASE_URL=${DATABASE_URL}
       - REDIS_URL=${REDIS_URL}
@@ -1038,10 +980,8 @@ volumes: - redis_data:/data
 
 volumes:
 postgres_data:
-redis_data:</code>
-
-  </pre>
-</div>
+redis_data:
+```
 
 ---
 
@@ -1058,7 +998,6 @@ redis_data:</code>
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-4xl font-bold text-green-400 w-16">2</div>
       <div>
@@ -1068,7 +1007,6 @@ redis_data:</code>
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-4xl font-bold text-purple-400 w-16">3</div>
       <div>
@@ -1078,7 +1016,6 @@ redis_data:</code>
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-4xl font-bold text-orange-400 w-16">4</div>
       <div>
@@ -1088,7 +1025,6 @@ redis_data:</code>
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-4xl font-bold text-red-400 w-16">5</div>
       <div>
@@ -1103,13 +1039,9 @@ redis_data:</code>
 
 ---
 
-## class: text-center
-
-<div class="h-full flex items-center justify-center">
-  <div>
-    <h1 class="text-5xl font-bold mb-6">Bringing It All Together</h1>
-    <p class="text-2xl opacity-80">The Complete Self-Hosted DevOps Stack</p>
-  </div>
+<div class="h-full flex flex-col items-center justify-center px-20">
+  <h1 class="text-4xl font-bold mb-12">Bringing It All Together</h1>
+  <p class="text-2xl opacity-80">The Complete Self-Hosted DevOps Stack</p>
 </div>
 
 ---
@@ -1127,7 +1059,6 @@ redis_data:</code>
         Handles your foundational infrastructure needs including networking, email, file services, security, and VPN access. This is the bedrock of your self-hosted environment, providing enterprise-grade services that every organization needs.
       </p>
     </div>
-    
     <div class="p-8 bg-green-500/10 rounded-lg border-l-4 border-green-400">
       <div class="flex items-center gap-4 mb-4">
         <div class="text-3xl font-bold text-green-400">Tier 2</div>
@@ -1137,7 +1068,6 @@ redis_data:</code>
         Provides the platform-as-a-service experience for deploying individual applications quickly and easily. Perfect for MVPs, side projects, rapid experimentation, and any application that doesn't require complex orchestration.
       </p>
     </div>
-    
     <div class="p-8 bg-purple-500/10 rounded-lg border-l-4 border-purple-400">
       <div class="flex items-center gap-4 mb-4">
         <div class="text-3xl font-bold text-purple-400">Tier 3</div>
@@ -1203,7 +1133,6 @@ graph TB
         <li>• Data must stay in-country for compliance</li>
       </ul>
     </div>
-    
     <div>
       <h3 class="text-xl font-bold mb-4 text-green-400">Infrastructure Solution</h3>
       <ul class="space-y-2 text-base opacity-80">
@@ -1270,7 +1199,6 @@ graph TB
         </div>
       </div>
     </div>
-    
     <div class="p-8 bg-green-500/10 rounded-lg">
       <h3 class="text-2xl font-bold mb-6 text-green-400">Self-Hosted Stack</h3>
       <div class="space-y-3 text-base">
@@ -1328,21 +1256,18 @@ graph TB
         Advanced firewall rules control all traffic. Intrusion detection systems alert on suspicious activity. VPN encryption protects remote access. Network segmentation isolates sensitive services. DDoS protection prevents service disruption.
       </p>
     </div>
-    
     <div class="p-6 bg-green-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Application Layer (Coolify/Dokploy)</h3>
       <p class="text-base opacity-80">
         Container isolation prevents lateral movement between services. Least-privilege access ensures services only have permissions they need. Automated security updates patch vulnerabilities quickly. Secrets management keeps credentials encrypted and rotatable.
       </p>
     </div>
-    
     <div class="p-6 bg-purple-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Data Layer</h3>
       <p class="text-base opacity-80">
         Encryption at rest protects stored data. Encryption in transit secures data moving between services. Automated backups ensure recovery from any disaster. Access logging creates audit trails. Compliance auditing validates security posture regularly.
       </p>
     </div>
-    
     <div class="p-6 bg-orange-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Best Practices</h3>
       <div class="grid grid-cols-2 gap-4 text-sm opacity-80">
@@ -1372,7 +1297,6 @@ graph TB
         Track system resources including CPU, memory, disk, and network utilization. Monitor service health to detect failures immediately. Analyze security events for potential threats. Generate alerts when thresholds are exceeded.
       </p>
     </div>
-    
     <div class="p-6 bg-green-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
         <span class="text-2xl">📱</span>
@@ -1382,7 +1306,6 @@ graph TB
         Aggregate application logs for troubleshooting. Track deployment history to understand changes. Configure health checks to verify service availability. Monitor performance metrics like response times and error rates.
       </p>
     </div>
-    
     <div class="p-6 bg-purple-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
         <span class="text-2xl">🐳</span>
@@ -1392,7 +1315,6 @@ graph TB
         Track resource utilization per container. Monitor container health and restart policies. Analyze service mesh metrics for microservices communication. Implement distributed tracing to follow requests across services.
       </p>
     </div>
-    
     <div class="p-6 bg-orange-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
         <span class="text-2xl">📊</span>
@@ -1425,7 +1347,6 @@ graph TB
         Maintain three total copies: your original plus two backups. This ensures redundancy even if one backup fails.
       </p>
     </div>
-    
     <div class="text-center p-8 bg-green-500/10 rounded-lg">
       <div class="text-5xl font-bold text-green-400 mb-4">2</div>
       <h3 class="text-xl font-bold mb-3">Different Media</h3>
@@ -1433,7 +1354,6 @@ graph TB
         Store backups on two different types of media. For example: disk and tape, or disk and cloud storage.
       </p>
     </div>
-    
     <div class="text-center p-8 bg-purple-500/10 rounded-lg">
       <div class="text-5xl font-bold text-purple-400 mb-4">1</div>
       <h3 class="text-xl font-bold mb-3">Off-Site Copy</h3>
@@ -1448,12 +1368,10 @@ graph TB
       <h3 class="font-bold mb-2">NethServer Implementation</h3>
       <p class="text-sm opacity-80">Automated backup scheduling with flexible retention policies. Rotation ensures old backups are cleaned up automatically.</p>
     </div>
-    
     <div class="p-5 bg-green-500/5 border-l-4 border-green-400">
       <h3 class="font-bold mb-2">Coolify Implementation</h3>
       <p class="text-sm opacity-80">Git repository backups preserve your code and configuration. Database snapshots capture state at specific points in time.</p>
     </div>
-    
     <div class="p-5 bg-purple-500/5 border-l-4 border-purple-400">
       <h3 class="font-bold mb-2">Dokploy Implementation</h3>
       <p class="text-sm opacity-80">Volume backups protect persistent data. Configuration exports enable infrastructure recreation. Container image registry preserves application versions.</p>
@@ -1469,12 +1387,10 @@ graph TB
   <div class="grid grid-cols-2 gap-12">
     <div>
       <h2 class="text-2xl font-bold mb-6 text-blue-400">Vertical Scaling</h2>
-      
       <div class="mb-6">
         <h3 class="font-bold mb-2">When to Use</h3>
         <p class="text-sm opacity-80">Single application needs more resources. Database performance is bottlenecked by hardware. Simpler than horizontal scaling for initial growth.</p>
       </div>
-      
       <div class="mb-6">
         <h3 class="font-bold mb-2">How to Implement</h3>
         <ul class="text-sm opacity-80 space-y-2">
@@ -1484,21 +1400,17 @@ graph TB
           <li>• Upgrade to faster storage (NVMe SSDs)</li>
         </ul>
       </div>
-      
       <div>
         <h3 class="font-bold mb-2">Tools</h3>
         <p class="text-sm opacity-80">NethServer resource allocation dashboard. Container resource limits in Docker. Database performance monitoring and tuning.</p>
       </div>
     </div>
-    
     <div>
       <h2 class="text-2xl font-bold mb-6 text-green-400">Horizontal Scaling</h2>
-      
       <div class="mb-6">
         <h3 class="font-bold mb-2">When to Use</h3>
         <p class="text-sm opacity-80">Need to distribute load across multiple servers. Vertical scaling has reached practical limits. Require high availability and fault tolerance.</p>
       </div>
-      
       <div class="mb-6">
         <h3 class="font-bold mb-2">How to Implement</h3>
         <ul class="text-sm opacity-80 space-y-2">
@@ -1508,7 +1420,6 @@ graph TB
           <li>• Set up database replication</li>
         </ul>
       </div>
-      
       <div>
         <h3 class="font-bold mb-2">Tools</h3>
         <p class="text-sm opacity-80">Dokploy multi-node deployment. NethServer load balancing capabilities. PostgreSQL replication. Redis clustering.</p>
@@ -1532,7 +1443,6 @@ graph TB
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-4xl font-bold text-green-400 w-20 flex-shrink-0">Step 2</div>
       <div>
@@ -1542,7 +1452,6 @@ graph TB
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-4xl font-bold text-purple-400 w-20 flex-shrink-0">Step 3</div>
       <div>
@@ -1552,7 +1461,6 @@ graph TB
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-4xl font-bold text-orange-400 w-20 flex-shrink-0">Step 4</div>
       <div>
@@ -1562,7 +1470,6 @@ graph TB
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-4xl font-bold text-red-400 w-20 flex-shrink-0">Step 5</div>
       <div>
@@ -1572,7 +1479,6 @@ graph TB
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-4xl font-bold text-pink-400 w-20 flex-shrink-0">Step 6</div>
       <div>
@@ -1594,35 +1500,30 @@ graph TB
     <div>
       <h2 class="text-2xl font-bold mb-6 text-blue-400">Building Internal Expertise</h2>
     </div>
-    
     <div class="p-6 bg-blue-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Week 1-2: Foundations</h3>
       <p class="text-base opacity-80">
         Linux administration basics including file systems, permissions, and services. Docker fundamentals covering containers, images, and volumes. Networking concepts like DNS, firewalls, and load balancing. Version control with Git.
       </p>
     </div>
-    
     <div class="p-6 bg-green-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Week 3-4: Platform Training</h3>
       <p class="text-base opacity-80">
         NethServer administration through web interface and command line. Coolify deployment workflows from Git repositories. Dokploy orchestration for multi-container applications. Hands-on labs with real-world scenarios.
       </p>
     </div>
-    
     <div class="p-6 bg-purple-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Week 5-6: DevOps Practices</h3>
       <p class="text-base opacity-80">
         GitOps workflows and infrastructure as code. Building CI/CD pipelines for automated testing and deployment. Monitoring, logging, and alerting best practices. Incident response procedures and post-mortems.
       </p>
     </div>
-    
     <div class="p-6 bg-orange-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Ongoing: Knowledge Sharing</h3>
       <p class="text-base opacity-80">
         Create and maintain internal documentation wikis. Write runbooks for common operational tasks. Conduct post-mortem reviews after incidents. Hold regular lunch-and-learn sessions. Encourage community participation.
       </p>
     </div>
-    
     <div class="mt-8 p-6 bg-blue-500/5 border-l-4 border-blue-400">
       <h3 class="text-lg font-bold mb-2">Learning Resources</h3>
       <p class="text-sm opacity-80">
@@ -1648,7 +1549,6 @@ graph TB
         <p class="text-base">Start small with well-documented tools. Leverage active community support forums. Invest in structured training programs. Hire one experienced person to mentor the team.</p>
       </div>
     </div>
-    
     <div class="grid grid-cols-2 gap-6">
       <div class="p-6 bg-red-500/10 rounded-lg">
         <h3 class="text-lg font-bold mb-3 text-red-400">Challenge</h3>
@@ -1659,7 +1559,6 @@ graph TB
         <p class="text-base">Self-hosted solutions often make compliance easier. You control exactly where data is stored. Complete audit trails are available. Documentation is straightforward since you own the stack.</p>
       </div>
     </div>
-    
     <div class="grid grid-cols-2 gap-6">
       <div class="p-6 bg-red-500/10 rounded-lg">
         <h3 class="text-lg font-bold mb-3 text-red-400">Challenge</h3>
@@ -1670,7 +1569,6 @@ graph TB
         <p class="text-base">All three platforms support clustering and high-availability configurations. Database replication prevents data loss. Load balancing distributes traffic. Geographic redundancy adds resilience.</p>
       </div>
     </div>
-    
     <div class="grid grid-cols-2 gap-6">
       <div class="p-6 bg-red-500/10 rounded-lg">
         <h3 class="text-lg font-bold mb-3 text-red-400">Challenge</h3>
@@ -1700,28 +1598,24 @@ graph TB
         The African Union Convention on Cyber Security and Personal Data Protection establishes data protection standards across the continent. Many African countries are implementing data localization requirements. Self-hosted infrastructure makes compliance straightforward.
       </p>
     </div>
-    
     <div class="p-6 bg-green-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Economic Development</h3>
       <p class="text-base opacity-90">
         Building local infrastructure creates high-quality technology jobs. Training programs develop valuable skills in the workforce. Money spent on infrastructure stays in local economies. Reduces capital flight to foreign technology companies.
       </p>
     </div>
-    
     <div class="p-6 bg-purple-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Digital Independence</h3>
       <p class="text-base opacity-90">
         Reduces reliance on foreign technology giants and their pricing changes. Improves resilience against geopolitical tensions and trade restrictions. Builds local capacity to solve African problems with African solutions.
       </p>
     </div>
-    
     <div class="p-6 bg-orange-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Performance & User Experience</h3>
       <p class="text-base opacity-90">
-        Data stored closer to users means dramatically lower latency. Better user experience leads to higher engagement. Local infrastructure can be optimized for African internet conditions.
+        Data stored closer to users means dramatically lower latency. Better user experience leads to higher engagement. Infrastructure optimized for African internet conditions.
       </p>
     </div>
-    
     <div class="p-6 bg-red-500/10 rounded-lg">
       <h3 class="text-xl font-bold mb-3">Cost Efficiency</h3>
       <p class="text-base opacity-90">
@@ -1755,7 +1649,6 @@ graph TB
           Invest in African-owned and operated data center facilities. Build capacity across the continent, not just in major cities. Partner with telecom providers to improve connectivity.
         </p>
       </div>
-      
       <div class="p-6 bg-green-500/10 rounded-lg">
         <h3 class="text-lg font-bold mb-2">Open Source First</h3>
         <p class="text-sm opacity-80">
@@ -1763,7 +1656,6 @@ graph TB
         </p>
       </div>
     </div>
-    
     <div class="space-y-6">
       <div class="p-6 bg-purple-500/10 rounded-lg">
         <h3 class="text-lg font-bold mb-2">Skills Development</h3>
@@ -1771,7 +1663,6 @@ graph TB
           Train the next generation of African infrastructure engineers. Create internship and mentorship programs. Partner with universities to update curricula.
         </p>
       </div>
-      
       <div class="p-6 bg-orange-500/10 rounded-lg">
         <h3 class="text-lg font-bold mb-2">Pan-African Collaboration</h3>
         <p class="text-sm opacity-80">
@@ -1793,11 +1684,10 @@ graph TB
       <div>
         <h3 class="text-xl font-bold mb-2">Experiment</h3>
         <p class="text-base opacity-80">
-          Spin up a test server and install NethServer. Deploy a simple application with Coolify. Get your hands dirty and start learning. The best way to understand these tools is to use them.
+          Spin up a test server and install NethServer 8. Deploy a simple application with Coolify. Get your hands dirty and start learning. The best way to understand these tools is to use them.
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-3xl font-bold text-green-400 w-24 flex-shrink-0">This Month</div>
       <div>
@@ -1807,7 +1697,6 @@ graph TB
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-3xl font-bold text-purple-400 w-24 flex-shrink-0">Next Month</div>
       <div>
@@ -1817,17 +1706,15 @@ graph TB
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-3xl font-bold text-orange-400 w-24 flex-shrink-0">This Quarter</div>
       <div>
         <h3 class="text-xl font-bold mb-2">Pilot</h3>
         <p class="text-base opacity-80">
-          Deploy non-critical services to your self-hosted infrastructure. Gather feedback from users and team members. Iterate based on what you learn. Build confidence before tackling mission-critical systems.
+          Deploy non-critical services to your self-hosted infrastructure. Gather feedback from users and team members. Iterate based on what you learn. Build confidence before tackling critical systems.
         </p>
       </div>
     </div>
-    
     <div class="flex items-start gap-6">
       <div class="text-3xl font-bold text-red-400 w-24 flex-shrink-0">This Year</div>
       <div>
@@ -1868,7 +1755,6 @@ graph TB
           </div>
         </div>
       </div>
-      
       <div>
         <h2 class="text-2xl font-bold mb-4 text-green-400">Coolify</h2>
         <div class="space-y-2 text-base">
@@ -1891,7 +1777,6 @@ graph TB
         </div>
       </div>
     </div>
-    
     <div class="space-y-8">
       <div>
         <h2 class="text-2xl font-bold mb-4 text-purple-400">Dokploy</h2>
@@ -1914,7 +1799,6 @@ graph TB
           </div>
         </div>
       </div>
-      
       <div>
         <h2 class="text-2xl font-bold mb-4 text-orange-400">Additional Resources</h2>
         <div class="space-y-2 text-sm opacity-80">
@@ -1930,10 +1814,12 @@ graph TB
   
   <div class="mt-12 p-6 bg-blue-500/10 rounded-lg text-center">
     <h3 class="text-xl font-bold mb-2">Our Platform</h3>
-    <a href="https://forge.genius.ke/" target="_blank" class="text-2xl text-blue-400 hover:text-blue-300 font-mono">
+    <a href="https://forge.genius.ke/" target="_blank" class="text-2xl text-blue-400 hover:text-blue-300 font-mono mb-12">
       forge.genius.ke
     </a>
-    <p class="text-sm opacity-70 mt-2">See these tools in action on our production infrastructure</p>
+    <p class="text-sm opacity-70 mt-2">
+      See these tools in action on our production infrastructure
+    </p>
   </div>
 </div>
 
@@ -1946,19 +1832,15 @@ graph TB
     <div class="p-6 bg-blue-500/10 rounded-lg text-center">
       <p class="font-semibold">Data sovereignty is not just possible—it's practical and achievable today</p>
     </div>
-    
     <div class="p-6 bg-green-500/10 rounded-lg text-center">
       <p class="font-semibold">Open source gives you freedom and control, not just free software</p>
     </div>
-    
     <div class="p-6 bg-purple-500/10 rounded-lg text-center">
       <p class="font-semibold">You don't have to choose between control and developer velocity</p>
     </div>
-    
     <div class="p-6 bg-orange-500/10 rounded-lg text-center">
       <p class="font-semibold">Africa can lead in building sovereign digital infrastructure</p>
     </div>
-    
     <div class="p-6 bg-red-500/10 rounded-lg text-center">
       <p class="font-semibold">The tools exist today—you just need to take the first step</p>
     </div>
@@ -1978,9 +1860,9 @@ graph TB
   
   <div class="grid grid-cols-2 gap-12 max-w-4xl mb-16">
     <div class="text-left p-8 bg-blue-500/10 rounded-xl">
-      <div class="text-sm opacity-60 mb-2">👨‍💻 Lead Presenter</div>
+      <div class="text-sm opacity-60 mb-2">Lead Presenter</div>
       <div class="text-2xl font-bold mb-4">Martin Bhoung</div>
-      <div class="space-y-2 text-sm">
+      <div class="space-y-2 text-sm pt-4">
         <div class="flex items-center gap-2">
           <carbon-logo-twitter class="text-base" />
           <span>@martinbhoung</span>
@@ -1999,46 +1881,23 @@ graph TB
         </div>
       </div>
     </div>
-    
     <div class="text-left p-8 bg-green-500/10 rounded-xl">
-      <div class="text-sm opacity-60 mb-2">🚀 Co-Presenter</div>
+      <div class="text-sm opacity-60 mb-2">Co-Presenter</div>
       <div class="text-2xl font-bold mb-4">Kemboi Elvis</div>
-      <div class="space-y-2 text-sm">
+      <div class="space-y-2 text-sm pt-4">
         <div class="flex items-center gap-2">
           <carbon-logo-twitter class="text-base" />
-          <span>@kemboielvis</span>
+          <span>@kemboielvis22</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-logo-github class="text-base" />
-          <span>github.com/kemboielvis</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <carbon-logo-linkedin class="text-base" />
-          <span>linkedin.com/in/kemboielvis</span>
+          <span>github.com/kemboi22</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-email class="text-base" />
-          <span>elvis@genius.ke</span>
+          <span>kemboielvis@genius.ke</span>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="p-8 bg-purple-500/10 rounded-xl">
-    <div class="text-sm opacity-60 mb-2">🌐 Check out our platform</div>
-    <a href="https://forge.genius.ke/" target="_blank" class="text-3xl text-blue-400 hover:text-blue-300 font-mono">
-      forge.genius.ke
-    </a>
-  </div>
-  
-  <div class="mt-12">
-    <div class="text-sm opacity-60 mb-3">Community Links</div>
-    <div class="flex gap-6 justify-center text-sm">
-      <a href="https://www.devopssummit.africa/" target="_blank" class="opacity-70 hover:opacity-100">Africa DevOps Summit</a>
-      <span class="opacity-30">•</span>
-      <a href="https://community.nethserver.org/" target="_blank" class="opacity-70 hover:opacity-100">NethServer Community</a>
-      <span class="opacity-30">•</span>
-      <span class="opacity-70">Nairobi DevOps Community</span>
     </div>
   </div>
 </div>
@@ -2047,34 +1906,48 @@ graph TB
 
 <div class="h-full flex items-center justify-center px-20">
   <div class="text-center max-w-4xl">
-    <div class="text-5xl font-bold mb-12">🚀 Start Your Sovereignty Journey Today</div>
-    
-    <div class="grid grid-cols-2 gap-12 mb-16">
+    <div class="text-5xl font-bold mb-10">🚀 Start Your Journey Today</div>
+    <div class="grid grid-cols-2 gap-10 mb-12">
       <div class="p-8 bg-blue-500/10 rounded-xl text-left">
-        <div class="text-3xl mb-4">📚</div>
-        <div class="text-2xl font-bold mb-4">Learn More</div>
-        <div class="space-y-3 text-base opacity-80">
-          <div><strong>NethServer:</strong> nethserver.org</div>
-          <div><strong>Coolify:</strong> coolify.io</div>
-          <div><strong>Dokploy:</strong> dokploy.com</div>
-          <div><strong>Our Platform:</strong> forge.genius.ke</div>
+        <div class="text-3xl mb-3">📚</div>
+        <div class="text-2xl font-bold mb-3">Learn & Explore</div>
+        <div class="space-y-2 text-sm opacity-80">
+          <div><span class="font-bold">NethServer:</span> nethserver.org</div>
+          <div><span class="font-bold">Docs:</span> docs.nethserver.org</div>
+          <div><span class="font-bold">Community:</span> community.nethserver.org</div>
+          <div><span class="font-bold">Platform Apps:</span> forge.genius.ke</div>
+          <div><span class="font-bold">Website:</span> genius.africa</div>
         </div>
       </div>
-      
       <div class="p-8 bg-green-500/10 rounded-xl text-left">
-        <div class="text-3xl mb-4">🌍</div>
-        <div class="text-2xl font-bold mb-4">Join the Community</div>
-        <div class="space-y-3 text-base opacity-80">
-          <div><strong>Africa DevOps Summit</strong></div>
+        <div class="text-3xl mb-3">🌍</div>
+        <div class="text-2xl font-bold mb-3">Join the Movement</div>
+        <div class="space-y-2 text-sm opacity-80">
+          <div><span class="font-bold">Africa DevOps Summit</span></div>
           <div>devopssummit.africa</div>
-          <div class="mt-4"><strong>Nairobi DevOps Community</strong></div>
-          <div>Connect, Learn, Build Together</div>
+          <div class="mt-3"><span class="font-bold">Build. Share. Grow.</span></div>
+          <div>Your data. Your sovereignty. Your future.</div>
         </div>
       </div>
     </div>
-    
-    <div class="text-2xl opacity-70 italic">
-      "The future of African tech is sovereign, open, and in our hands"
+    <div class="text-2xl opacity-70 italic">"The future of African tech is sovereign, open, and in our hands"</div>
+  </div>
+</div>
+
+---
+
+<div class="h-full flex flex-col items-center justify-center">
+  <div class="text-6xl mb-8">🔓</div>
+  <h1 class="text-5xl font-bold mb-8">Questions?</h1>
+  <p class="text-2xl opacity-80 mb-10">Let's discuss how you can achieve data sovereignty</p>
+  <div class="grid grid-cols-2 gap-8 max-w-3xl text-base">
+    <div class="text-center p-6 bg-blue-500/10 rounded-lg">
+      <div class="font-bold mb-2">💬 Ask Us Anything</div>
+      <div class="text-sm opacity-70">About modules, migration, costs, or implementation</div>
+    </div>
+    <div class="text-center p-6 bg-green-500/10 rounded-lg">
+      <div class="font-bold mb-2">🤝 Connect After</div>
+      <div class="text-sm opacity-70">We're here to help you get started</div>
     </div>
   </div>
 </div>

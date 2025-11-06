@@ -14,7 +14,7 @@ RUN bun install
 COPY . .
 
 # Build the slides
-RUN bun run build
+RUN bun run build 
 
 # Expose port 4173 (default vite preview port)
 EXPOSE 4173
