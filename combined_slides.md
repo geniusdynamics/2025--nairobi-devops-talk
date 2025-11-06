@@ -672,6 +672,7 @@ volumes: - postgres_data:/var/lib/postgresql/data
 environment: - POSTGRES_PASSWORD=${DB_PASSWORD}
 
 ```
+
 ---
 
 <div class="px-20 py-16">
@@ -981,6 +982,7 @@ volumes:
 postgres_data:
 redis_data:
 ```
+
 ---
 
 <div class="px-20 py-16">
