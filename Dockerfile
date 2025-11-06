@@ -1,5 +1,5 @@
-# Use Bun for everything
-FROM oven/bun:latest
+# Build stage
+FROM oven/bun:latest AS builder
 
 WORKDIR /app
 
@@ -14,10 +14,16 @@ RUN bun install
 COPY . .
 
 # Build the slides
-RUN bun run build 
+RUN bun run build
 
-# Expose port 4173 (default vite preview port)
-EXPOSE 4173
+# Production stage
+FROM nginx:alpine
 
-# Serve with vite preview
-CMD ["bunx", "vite", "preview", "--host", "0.0.0.0", "--port", "4173"]
+# Copy built files to nginx
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
