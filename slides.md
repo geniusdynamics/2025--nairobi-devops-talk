@@ -56,11 +56,11 @@ mdc: true
       <div class="space-y-2 text-sm pt-4">
         <div class="flex items-center gap-2">
           <carbon-logo-github class="text-base" />
-          <span>github.com/martinbhoung</span>
+          <span>github.com/compgeniuses</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-logo-twitter class="text-base" />
-          <span>@martinbhoung</span>
+          <span>@oneitonitram</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-email class="text-base" />
@@ -77,15 +77,15 @@ mdc: true
       <div class="space-y-2 text-sm pt-4">
         <div class="flex items-center gap-2">
           <carbon-logo-github class="text-base" />
-          <span>github.com/kemboielvis</span>
+          <span>github.com/kemboi22</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-logo-twitter class="text-base" />
-          <span>@kemboielvis</span>
+          <span>@kemboielvis22</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-email class="text-base" />
-          <span>elvis@genius.ke</span>
+          <span>kemboielvis@genius.ke</span>
         </div>
       </div>
     </div>
@@ -1865,15 +1865,15 @@ graph TB
       <div class="space-y-2 text-sm pt-4">
         <div class="flex items-center gap-2">
           <carbon-logo-twitter class="text-base" />
-          <span>@martinbhoung</span>
+          <span>@oneitonitram</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-logo-github class="text-base" />
-          <span>github.com/martinbhoung</span>
+          <span>github.com/compgeniuses</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-logo-linkedin class="text-base" />
-          <span>linkedin.com/in/martinbhoung</span>
+          <span>linkedin.com/in/oneitonitram</span>
         </div>
         <div class="flex items-center gap-2">
           <carbon-email class="text-base" />
